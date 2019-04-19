@@ -1,0 +1,26 @@
+﻿@model NetCoreWithDatabaseFirst.Models.Products
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>รายละเอียดสินค้า</title>
+</head>
+<body>
+    <ul class="list-group">
+        <li class="list-group-item active">ID: @Model.ProductId</li>
+        <li class="list-group-item">Name: @Model.ProductName</li>
+        <li class="list-group-item">Price: @Model.UnitPrice</li>
+        <li class="list-group-item">In Stock: @Model.UnitsInStock</li>
+        <li class="list-group-item">Level: @Model.ReorderLevel</li>
+        <li class="list-group-item">Category: @Model.Category.CategoryName</li>
+        <li class="list-group-item">Company: @Model.Supplier.CompanyName</li>
+    </ul>
+    <a href="/Products/Index">กลับหน้าสินค้า</a>
+</body>
+</html>

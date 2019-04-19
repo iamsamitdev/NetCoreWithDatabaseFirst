@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreWithDatabaseFirst", "NetCoreWithDatabaseFirst\NetCoreWithDatabaseFirst.csproj", "{91956BB7-8126-4A7F-B415-162AA8B13E4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91956BB7-8126-4A7F-B415-162AA8B13E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91956BB7-8126-4A7F-B415-162AA8B13E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91956BB7-8126-4A7F-B415-162AA8B13E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91956BB7-8126-4A7F-B415-162AA8B13E4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F17258B-E7F2-434D-8C09-D4E68D80E6FE}
+	EndGlobalSection
+EndGlobal

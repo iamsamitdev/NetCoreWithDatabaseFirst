@@ -1,0 +1,58 @@
+﻿@model IEnumerable<NetCoreWithDatabaseFirst.Models.Products>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>ข้อมูลสินค้าจากตาราง Products</h3>
+<p>
+    @using (Html.BeginForm("SearchProducts", "Products", FormMethod.Get))
+    {
+        <div class="row">
+            <div class="col-md-4">
+                @Html.TextBox("txtFilter", null, new { @class = "form-control" })
+            </div>
+            <div class="col-md-2">
+                <input type="submit" value="ค้นหา" class="btn btn-success" />
+            </div>
+            <div class="col-md-6 text-right">
+                <a href="/Products/Create" class="btn btn-success">เพิ่มสินค้าใหม่</a>
+            </div>
+        </div>
+    }
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr class="bg-primary text-light">
+            <th>รหัสสินค้า</th>
+            <th>หมวดหมู่สินค้า</th>
+            <th>ชื่อสินค้า</th>
+            <th>ราคาสินค้า</th>
+            <th>Unit in stock</th>
+            <th>Level</th>
+            <th>Suppliers</th>
+            <th>Manage</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductId</td>
+                <td>@item.Category.CategoryName</td>
+                <td>@item.ProductName</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.UnitsInStock</td>
+                <td>@item.ReorderLevel</td>
+                <td>@item.Supplier.CompanyName</td>
+                <td style="width:200px">
+                    <a href="/Products/Details/@item.ProductId" class="btn btn-sm btn-info">Detail</a>
+                    <a href="/Products/Edit/@item.ProductId" class="btn btn-sm btn-warning">Edit</a>
+                    <form method="post" action="/Products/Delete/@item.ProductId" style="display:inline" onsubmit="return confirm('ต้องการลบข้อมูลนี้หรือไม่ ?')">
+                        <button type="submit" href="" class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
